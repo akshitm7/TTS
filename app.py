@@ -16,13 +16,13 @@ os.makedirs(app.config['UPLOAD_FOLDER'], exist_ok=True)
 class EnhancedImageAnalyzer:
     def __init__(self):
         # Replace with your API key
-        api_key = "AIzaSyDhY1MuHmLEVStBkgvHnuWINWydugH4SYM"
+        api_key = ""
         genai.configure(api_key=api_key)
         self.model = genai.GenerativeModel(model_name="gemini-1.5-flash")
         self.image_memory = {}
 
         # ElevenLabs TTS API Key (Replace with your own key)
-        self.elevenlabs_api_key = "sk_2493130858923ce4d3f02e2bf8cd7556ba8813d1b3d8dff6"
+        self.elevenlabs_api_key = ""
         self.elevenlabs_url = "https://elevenlabs.io/app/speech-synthesis/text-to-speech"
     def _validate_image(self, image_data):
         try:
